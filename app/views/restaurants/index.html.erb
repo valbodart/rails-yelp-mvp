@@ -1,9 +1,10 @@
-<h1>Our restaurants</h1>
-<ul>
+<div class="container">
+  <h1>Our restaurants</h1>
+  <div class="d-flex justify-content-around flex-wrap">
   <% @restaurants.each do |restaurant| %>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant)%></li>
+    <div class="card p-2"><%= link_to restaurant.name, restaurant_path(restaurant)%></div>
   <% end %>
-</ul>
-
-<br>
-<p><%= link_to 'Create a new restaurant', new_restaurant_path %></p>
+  </div>
+  <br>
+  <p><%= link_to 'Create a new restaurant', new_restaurant_path %></p>
+</div>
